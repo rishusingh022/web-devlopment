@@ -5,8 +5,28 @@
 </head>
 <body>
 	<form>
-		<input type="text" placeholder="full name" name="name">
-		<button>submit!</button>
+		<div>
+			<input type="text" placeholder="full name" name="name">
+		    <input type="password" placeholder="password" name="password">	
+		</div>
+		<div>
+			favorite color?
+			<input type="color" type="radio button" value="red">red
+			<input type="color" type="radio" value="green">green
+			<input type="color" type="radio" value="blue">blue
+			<input type="color" type="radio" value="other">other
+
+		</div>
+		
+		<div>
+			<input name="country" list="countries" placeholder="country">
+			<datalist id="countries">
+				<option value="afghanistan">
+				<option value="uk">
+				<option value="usa">
+				<option value="india">
+
+			</datalist>
 	</form>	
 
 </body>
