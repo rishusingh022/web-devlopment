@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+    flight
+{% endblock %}
+
+{% block body %}
+    <h1>book a flight!</h1>
+    <form action="{{url_for('book')}}" method="post">
+    	<div class="form-group">
+    		<select class="form-control" name="flight_id">
+    			{% for f in flight %}
+    			    <option value="{{ f.id }}">{{f.origin}} to {{f.destination}}</option>
+    			{% endfor %}
+    		</select>
+    	</div>
+    	<div class="form-group">
+    		<input class="form-control" name="name" placeholder="passenger Name">    		
+    	</div>
+    	<div class="form-group">
+    		<button class="btn btn-primary">Book Flight</button>
+    	</div>
+    </form>	
+{% endblock %}
